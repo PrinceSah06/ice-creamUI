@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pink: #ff3b6b;
+  --color-yellow: #ffd700;
+  --color-blue: #00aeef;
+  --color-dark: #1a1a2e;
+  --color-cream: #fff8f0;
+  --color-red: #e8002a;
+
+  --font-fredoka: "Fredoka One", cursive;
+  --font-nunito: "Nunito", sans-serif;
+}
