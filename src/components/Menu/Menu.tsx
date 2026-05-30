@@ -26,14 +26,15 @@ export const Menu: React.FC = () => {
   return (
     <section className="menu bg-[#fffaf2] px-4 pb-5 sm:px-6 lg:px-7">
       <div className="mx-auto max-w-[1370px] overflow-hidden rounded-[24px] bg-white shadow-[0_8px_30px_rgba(20,32,60,0.08)] ring-1 ring-[#efe7db]">
-        <img
-          src={menuBanner}
-          alt="Our menu banner"
-          className="h-[240px] w-full object-cover object-center sm:h-[340px] lg:h-auto"
-        />
+        <div className="relative">
+          <img
+            src={menuBanner}
+            alt="Our menu banner"
+            className="h-[240px] w-full rounded-t-[24px] object-cover object-center sm:h-[340px] lg:h-auto"
+          />
 
-        <div className="border-y border-[#efe7db] bg-white px-3 py-3">
-          <div className="flex gap-2 overflow-x-auto pb-1">
+          <div className="absolute inset-x-3 bottom-0 translate-y-1/2 rounded-full bg-white/95 p-2 shadow-[0_10px_28px_rgba(20,32,60,0.14)] ring-1 ring-[#efe7db] backdrop-blur sm:inset-x-8">
+            <div className="flex gap-2 overflow-x-auto">
             {tabs.map(({ label, Icon, active }) => (
               <button
                 key={label}
@@ -47,10 +48,11 @@ export const Menu: React.FC = () => {
                 {label}
               </button>
             ))}
+            </div>
           </div>
         </div>
 
-        <div className="grid gap-4 p-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+        <div className="grid gap-4 p-4 pt-14 sm:grid-cols-2 sm:pt-16 lg:grid-cols-3 xl:grid-cols-6">
           {menuItems.map((item, index) => (
             <article
               key={item}
